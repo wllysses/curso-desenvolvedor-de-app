@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #8d80da;
+}
+
+body {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+header {
+  background-color: var(--cor-primaria);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero,
+.sobre {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.poster {
+  width: 50%;
+}
+
+.poster > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 50%;
+}
+
+.informacoes > a {
+  background-color: var(--cor-primaria);
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sobre-o-filme > h3,
+.personagens > h3,
+.curiosidades > h3,
+.onde-assistir > h3 {
+  color: var(--cor-primaria);
+  font-size: 24px;
+}
+
+.sobre-o-filme > p {
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.poster-sobre-o-filme > img {
+  border-radius: 8px;
+}
+
+.personagens {
+  margin-top: 40px;
+}
+
+.lista-personagens {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.personagem {
+  max-width: 300px;
+  width: 100%;
+  border: 2px solid #0000002c;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.personagem > img {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 100%;
+}
+
+.personagem > h4 {
+  margin: 10px 0;
+}
+
+.curiosidades {
+  margin-top: 40px;
+}
+
+ul {
+  margin-top: 30px;
+}
+
+ul > li {
+  margin: 15px 0;
+}
+
+.onde-assistir {
+  margin-top: 40px;
+}
+
+.servicos-streaming {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.servico {
+  border: 2px solid #0000002c;
+  padding: 10px 50px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--cor-primaria);
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  margin-top: 50px;
+  font-size: 20px;
+}
