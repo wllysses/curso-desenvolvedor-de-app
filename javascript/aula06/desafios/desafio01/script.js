@@ -1,18 +1,36 @@
-// SOLICITAR DOIS NÚMEROS
-const primeiroNumero = Number(prompt("Informe o primeiro número:"));
+const primeiroNumero = Number(prompt("Informe o primeiro número: "));
 const segundoNumero = Number(prompt("Informe o segundo número: "));
+const operacaoMatematica = prompt(
+  "Qual operação matemática deseja realizar?\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão",
+);
+let resultadoOperacao = null;
+let operacaoEscolhida = null;
 
-if (primeiroNumero === 0 || segundoNumero === 0) {
-  alert("Você não digitou nada.");
+if (!primeiroNumero || !segundoNumero || !operacaoMatematica) {
+  alert("Todas as informações são necessárias.");
 } else {
-  // Calcular soma, subtração, multiplicação e divisão.
-  const soma = primeiroNumero + segundoNumero;
-  const subtracao = primeiroNumero - segundoNumero;
-  const multiplicacao = primeiroNumero * segundoNumero;
-  const divisao = primeiroNumero / segundoNumero;
+  switch (operacaoMatematica) {
+    case "1":
+      operacaoEscolhida = "Adição";
+      resultadoOperacao = primeiroNumero + segundoNumero;
+      break;
+    case "2":
+      operacaoEscolhida = "Subtração";
+      resultadoOperacao = primeiroNumero - segundoNumero;
+      break;
+    case "3":
+      operacaoEscolhida = "Multiplicação";
+      resultadoOperacao = primeiroNumero * segundoNumero;
+      break;
+    case "4":
+      operacaoEscolhida = "Divisão";
+      resultadoOperacao = primeiroNumero / segundoNumero;
+      break;
+    default:
+      alert("Informe um número válido.");
+  }
 
-  // Exibir os resultados
-  document.write(
-    `Resultados: Soma - ${soma} / Subtração - ${subtracao} / Multiplicação - ${multiplicacao} / Divisão - ${divisao}`,
+  alert(
+    `O resultado da operação de ${operacaoEscolhida} foi: ${resultadoOperacao}`,
   );
 }
