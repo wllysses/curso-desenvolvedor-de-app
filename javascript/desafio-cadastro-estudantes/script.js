@@ -32,6 +32,23 @@ while (opcoesUsuario !== "0") {
 
       alert(JSON.stringify(estudanteFiltrado, null, 2));
     }
+  } else if (opcoesUsuario === "4") {
+    const estudantesAprovados = estudantes.filter(function (estudante) {
+      return estudante.mediaEstudante >= 7;
+    });
+    alert(JSON.stringify(estudantesAprovados, null, 2));
+  } else if (opcoesUsuario === "5") {
+    const indiceEstudante = Number(
+      prompt("Informe o índice do estudante desejado:"),
+    );
+    if (indiceEstudante > estudantes.length - 1) {
+      alert("O índice digitado não existe.");
+    } else {
+      estudantes.splice(indiceEstudante, 1);
+      alert("Estudante removido com sucesso.");
+    }
+  } else {
+    alert("Informe uma opção válida.");
   }
 
   opcoesUsuario = prompt(
