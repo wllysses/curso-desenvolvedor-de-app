@@ -1,12 +1,8 @@
-function validarLogin(usuario, senha) {
-  const USUARIO_CORRETO = "admin";
-  const SENHA_CORRETA = 1234;
+function calcularDesconto(preco, percentual) {
+  let valorDesconto = preco * (percentual / 100);
+  let valorFinal = preco - valorDesconto;
 
-  if (USUARIO_CORRETO === "admin" && SENHA_CORRETA === 1234) {
-    console.log("Login realizado com sucesso!");
-  } else {
-    console.log("Usuário ou senha inválidos!");
-  }
+  return valorFinal;
 }
 
-validarLogin("admin", 1234);
+console.log(calcularDesconto(200, 10));
