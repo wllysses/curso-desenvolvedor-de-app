@@ -24,3 +24,11 @@ select.addEventListener("change", function (evento) {
 const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 const form = document.querySelector("form");
+
+form.addEventListener("submit", function (evento) {
+  evento.preventDefault();
+  console.log({
+    email: email.value,
+    senha: senha.value,
+  });
+});
